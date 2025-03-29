@@ -9,11 +9,11 @@ block content
   - var cols = Number(query.cols)
 
   if (!Number.isInteger(rows) || !Number.isInteger(cols))
-    p Rows and Colums must be an integer!
-  elif(rows < 3 || rows > 13)
-    p Rows has to be in the range of 3-13
-  elif(cols < 3 || cols > 13)
-    p Columns has to be in the range of 3-13
+    p Rows and Columns must be an integer!
+  else if (rows < 3 || rows > 13)
+    p Rows must be between 3 and 13
+  else if (cols < 3 || cols > 13)
+    p Columns must be between 3 and 13
   else
     table#outer
       - for(let i = 0; i < rows; i++) {
