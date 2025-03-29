@@ -6,12 +6,12 @@ block content
   - let image_names = ['image1.jpg', 'image2.jpg', 'image3.png', 'image4.jpg', 'image5.jpg']
 
   - for (let i = 0; i < 3; i++) {
-    - rand = Math.floor(Math.random()*5)
-    - image = image_names[randomIndex]
-      image (
-        src = `/images/${image}`,
-        alt = `${imageName}`,
-        width = "300",
-        height = "300"
-      )
+    - const randomIndex = Math.floor(Math.random() * 5)
+    - const image = image_names[randomIndex]
+    img(
+      src=`/images/${image}`,
+      alt=`${image.split('.')[0]}`,
+      width="300",
+      height="300"
+    )
   - }
