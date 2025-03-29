@@ -8,17 +8,17 @@ block content
   - var rows = Number(query.rows)
   - var cols = Number(query.cols)
 
-  - if (!Number.isInteger(rows) || !Number.isInteger(cols))
+  if (!Number.isInteger(rows) || !Number.isInteger(cols))
     p Rows and Colums must be an integer!
-  - elif(rows < 3 || rows > 13)
+  elif(rows < 3 || rows > 13)
     p Rows has to be in the range of 3-13
-  - elif(cols < 3 || cols > 13)
+  elif(cols < 3 || cols > 13)
     p Columns has to be in the range of 3-13
-  - else
+   else
     table#outer
-      - for(let i=0; i<10; i++) {
+      - for(let i = 0; i < rows; i++) {
         tr#middle
-        - for (var j = 0; j < cols; j++) {
+          - for(let j = 0; j < cols; j++) {
             td= i - j
-        - }
+          - }
       - }
